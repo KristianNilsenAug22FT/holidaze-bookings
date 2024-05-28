@@ -145,6 +145,7 @@ holidaze-bookings/
 ├── package-lock.json
 ├── package.json
 └── README.md
+```
 
 ## API Integration
 
