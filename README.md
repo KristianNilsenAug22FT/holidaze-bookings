@@ -98,6 +98,7 @@ Note: this is a one-way operation. Once you `eject`, you can't go back! This com
 
 ## Project Structure
 
+```plaintext
 holidaze-bookings/
 ├── public/
 │ ├── \_redirects
