@@ -31,7 +31,6 @@ function UserProfile() {
         );
         const data = await response.json();
         setProfile(data.data);
-        console.log("Fetched profile:", data.data);
       } catch (err) {
         setError("Failed to fetch profile");
         console.error("Failed to fetch profile:", err);
@@ -60,7 +59,6 @@ function UserProfile() {
         );
         const data = await response.json();
         setVenues(data.data);
-        console.log("Fetched venues:", data.data);
       } catch (err) {
         console.error("Failed to fetch venues:", err);
       }

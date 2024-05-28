@@ -61,7 +61,6 @@ function Profile() {
       setUpdatedAvatarAlt(data.data.avatar?.alt || "");
       setUpdatedBannerUrl(data.data.banner?.url || "");
       setUpdatedBannerAlt(data.data.banner?.alt || "");
-      console.log("Fetched profile:", data.data);
     } catch (err) {
       setError("Failed to fetch profile");
       console.error("Failed to fetch profile:", err);
@@ -106,7 +105,6 @@ function Profile() {
       );
       const data = await response.json();
       setMaxGuests(data.data.maxGuests);
-      console.log("Fetched venue details:", data.data);
     } catch (error) {
       console.error("Failed to fetch venue details", error);
     }
@@ -143,7 +141,6 @@ function Profile() {
         },
       );
       const data = await response.json();
-      console.log("Update booking response:", data);
       setSuccess("Booking updated successfully");
       setGuestWarning("");
       fetchProfile();
@@ -155,7 +152,6 @@ function Profile() {
   };
 
   const handleDateChange = (date) => {
-    console.log("Date range change:", date);
     if (Array.isArray(date)) {
       setUpdatedDateFrom(date[0].toISOString().split("T")[0]);
       setUpdatedDateTo(date[1].toISOString().split("T")[0]);

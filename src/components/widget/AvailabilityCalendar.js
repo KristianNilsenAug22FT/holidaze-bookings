@@ -19,7 +19,6 @@ function AvailabilityCalendar({ venueId, onDateChange }) {
           end: new Date(booking.dateTo).setHours(23, 59, 59, 999),
         }));
         setAvailableDates(bookedDates);
-        console.log("Fetched available dates:", bookedDates);
       } catch (error) {
         console.error("Failed to fetch available dates", error);
       }
@@ -43,7 +42,6 @@ function AvailabilityCalendar({ venueId, onDateChange }) {
 
     for (const booking of availableDates) {
       if (start <= booking.end && end >= booking.start) {
-        console.log("Invalid date range due to overlap:", start, end, booking);
         return false;
       }
     }
@@ -56,7 +54,6 @@ function AvailabilityCalendar({ venueId, onDateChange }) {
       const normalizedEndDate = new Date(date[1]).setHours(23, 59, 59, 999);
       const normalizedDateRange = [normalizedStartDate, normalizedEndDate];
 
-      console.log("Selected date range:", normalizedDateRange);
 
       if (isValidDateRange(normalizedDateRange)) {
         setSelectedDates(date);
