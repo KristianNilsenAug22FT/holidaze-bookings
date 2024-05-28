@@ -1,0 +1,414 @@
+/* Common Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.alert {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Card Styles */
+.card {
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.card-text {
+  color: #666;
+  max-height: 3.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Profile Page Styles */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile-info {
+  position: relative;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.profile-details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.booking-list,
+.venue-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.booking-item,
+.venue-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.booking-details,
+.venue-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.booking-details > span,
+.venue-details > span {
+  flex: 1 1 15%;
+  min-width: 100px;
+}
+
+.booking-actions,
+.venue-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.edit-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.nav-buttons .btn {
+  margin: 0;
+}
+
+.collapse-header {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.collapse-header button {
+  width: 100%;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-tabs .tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-tabs .tab.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.nav-tabs .tab:not(.active):hover {
+  background-color: #e1e1f1;
+}
+
+.tab-content {
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+.profilebtn {
+  margin-bottom: 10px;
+}
+
+/* Venue Detail Page Styles */
+.venue-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.venue-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.venue-description {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.venue-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+}
+
+.venue-details-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.venue-info,
+.venue-meta,
+.venue-location {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.venue-info span,
+.venue-meta span,
+.venue-location span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.venue-info,
+.venue-meta,
+.venue-location {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.venue-meta h3,
+.venue-location h3 {
+  margin-top: 0;
+}
+
+.book-now-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.book-now-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Venue Manager Dashboard Styles */
+.venue-manager-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.venue-manager-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.venue-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.venue-actions .dropdown-menu {
+  min-width: 200px;
+  right: 0;
+  left: auto;
+}
+
+.dropdown-menu {
+  width: 100%;
+  max-width: 300px;
+}
+
+.dropdown-item {
+  white-space: normal;
+  word-wrap: normal;
+}
+
+.dropdown-item div {
+  margin-bottom: 5px;
+}
+
+/* Stack the venue details section containers on top of each other on smaller screens */
+@media (max-width: 767px) {
+  .venue-details-section {
+    flex-direction: column;
+  }
+
+  .venue-info,
+  .venue-meta,
+  .venue-location {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .venue-details {
+    gap: 10px;
+  }
+
+  .venue-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .venue-actions .dropdown-menu {
+    width: 100%;
+    max-width: none;
+    position: relative;
+  }
+}
+
+/* Home Page Styles */
+.row {
+  margin-bottom: 20px;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.me-3 {
+  margin-right: 1rem !important;
+}
+
+.numberofguests {
+  max-width: 200px;
+  margin: auto;
+  padding-left: 10px;
+}
+
+.booked-date {
+  background-color: #ff0000;
+  color: #ffffff;
+}
