@@ -299,7 +299,7 @@ function VenueManagerDashboard({ isVenueManager, onRegisterAsVenueManager }) {
               {isCreatingVenue ? "Hide" : "Create New Venue"}
             </button>
             <button
-              className="btn btn-warning mt-3 ms-2"
+              className="deregisterbtn btn btn-warning mt-3 ms-2"
               onClick={handleDeregister}
             >
               De-register as Venue Manager

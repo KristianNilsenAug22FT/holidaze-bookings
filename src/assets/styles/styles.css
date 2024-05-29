@@ -168,6 +168,10 @@ footer {
   margin: 0;
 }
 
+.btn {
+  background-color: #324549
+}
+
 .collapse-header {
   text-align: center;
   font-size: 1.5rem;
@@ -199,6 +203,7 @@ footer {
   color: white;
   border-color: #007bff;
   border-bottom: 2px solid #007bff;
+
 }
 
 .nav-tabs .tab:not(.active):hover {
@@ -331,6 +336,11 @@ footer {
 .dropdown-item div {
   margin-bottom: 5px;
 }
+
+.deregisterbtn {
+    background-color: #FECB2C;
+}
+
 
 /* Stack the venue details section containers on top of each other on smaller screens */
 @media (max-width: 767px) {
