@@ -98,17 +98,18 @@ function Profile() {
     setUpdatedDateFrom(booking.dateFrom);
     setUpdatedDateTo(booking.dateTo);
     setUpdatedGuests(booking.guests);
-
+  
     try {
       const response = await fetch(
-        `https://v2.api.noroff.dev/holidaze/venues/${booking.venue.id}`,
+        `https://v2.api.noroff.dev/holidaze/venues/${booking.venue.id}`
       );
       const data = await response.json();
-      setMaxGuests(data.data.maxGuests);
+      setMaxGuests(data.maxGuests);
     } catch (error) {
       console.error("Failed to fetch venue details", error);
     }
   };
+  
 
   const handleUpdateBooking = async (bookingId) => {
     if (updatedGuests > maxGuests) {
@@ -140,6 +141,7 @@ function Profile() {
           }),
         },
       );
+      // eslint-disable-next-line
       const data = await response.json();
       setSuccess("Booking updated successfully");
       setGuestWarning("");
